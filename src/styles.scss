@@ -4,13 +4,47 @@
 @import "primeflex/primeflex.css";
 @import "primeicons/primeicons.css";
 
-/* Order */
+// Overwrite Chrome user agent styles
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: block;
+  margin: 0px;
+}
+
+// Style reset layers
+
 @layer reset, primeng;
 
-/* Reset CSS */
 @layer reset {
-  button,
-  input {
+  .p-menubar {
+    border-radius: 0px;
+  }
 
+  .p-menu {
+    min-width: 30px;
+  }
+
+  .switch-user-menu-item {
+    .p-menuitem-content {
+      border-radius: 30px;
+      background-color: #0067D2;
+      box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 1);
+      margin: 10px;
+      a {
+        color: #ffffff;
+        justify-content: center !important;
+      }
+
+      &:hover, &:active, &:focus {
+        background-color: #ffffff;
+        box-shadow: 0 0 0 1.5px #0067D2;
+        a {
+          color: #0067D2;
+        }
+      }
+    }
   }
 }

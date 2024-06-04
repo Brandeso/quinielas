@@ -1,16 +1,20 @@
 <div class="card flex justify-content-center">
   <p-sidebar [(visible)]="sidebarVisible">
-    <h3>Sidebar</h3>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
+    <ng-template #header pTemplate="header">
+      <p-avatar label="BA" styleClass="p-2" shape="circle" />
+      <span class="text-xl font-bold ml-2">Menu</span>
+    </ng-template>
+    <ng-template #content pTemplate="content">
+      <span>Lorem ipsum dolor sit amet...</span>
+    </ng-template>
   </p-sidebar>
 </div>
 <div class="bg-gray-100 border-200 border-button-1">
   <div class="flex align-items-center px-6 py-3 bg-gray-200">
     <div class="flex align-items-center">'
-      <p-button icon="pi pi-bars" (onClick)="sidebarVisible=true"></p-button>
+      <p-button icon="pi pi-bars"
+        (onClick)="sidebarVisible=true"
+        severity="secondary"></p-button>
       <img src="assets/pools-logo.png"
         data-header-logo
         class="hidden h-4rem md:block"

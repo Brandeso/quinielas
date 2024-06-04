@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeekService } from '../../services/weeks.service';
 import { Week } from '../../interfaces/week';
-import { FIREBASE_OPTIONS } from '@angular/fire/compat';
-import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +10,7 @@ import { environment } from '../../../environments/environment';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-
+  sidebarVisible: boolean = false;
   weeks: Week[] = [];
 
   constructor(

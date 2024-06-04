@@ -1,10 +1,19 @@
+<div class="card flex justify-content-center">
+  <p-sidebar [(visible)]="sidebarVisible">
+    <h3>Sidebar</h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </p-sidebar>
+</div>
 <div class="bg-gray-100 border-200 border-button-1">
   <div class="flex align-items-center px-6 py-3 bg-gray-200">
-    <div class="flex align-items-center">
+    <div class="flex align-items-center">'
+      <p-button icon="pi pi-bars" (onClick)="sidebarVisible=true"></p-button>
       <img src="assets/pools-logo.png"
         data-header-logo
-        height="40"
-        class="hidden md:block"
+        class="hidden h-4rem md:block"
       />
     </div>
   </div>

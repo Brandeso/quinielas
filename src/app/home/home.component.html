@@ -1,0 +1,23 @@
+<div class="grid bg-green-100 w-screen">
+  <div *ngFor="let item of weeks"
+    class="col-4 p-3 lg:col-3">
+    <p-card header="Semana {{ item.no }}"
+      subheader="{{ item.start }}/{{item.year}} - {{ item.end }}/{{ item.year }}">
+      <ng-template #header pTemplate="header">
+        <img alt="Card"
+          src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+          style="border-radius: 10px 10px 0 0;"
+        />
+      </ng-template>
+      <p>
+        Lorem ipsum dolor sit amet...
+      </p>
+      <ng-template pTemplate="footer">
+        <div class="flex gap-3 mt-1">
+          <p-button label="Editar" severity="secondary" class="w-full" styleClass="w-full" />
+          <p-button label="Ver más" class="w-full" styleClass="w-full" />
+        </div>
+      </ng-template>
+    </p-card>
+  </div>
+</div>
